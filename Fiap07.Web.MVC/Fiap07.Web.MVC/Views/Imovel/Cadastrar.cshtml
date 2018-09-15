@@ -22,6 +22,7 @@
         @Html.LabelFor(i => i.Categoria)
         @Html.DropDownListFor(i => i.CategoriaId,
             ViewBag.categorias as SelectList,
+            "Selecione",
             new { @class = "form-control" })
     </div>
     <div class="form-group">

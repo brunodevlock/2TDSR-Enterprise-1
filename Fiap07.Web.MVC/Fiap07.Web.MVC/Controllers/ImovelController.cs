@@ -13,6 +13,14 @@ namespace Fiap07.Web.MVC.Controllers
         private ImobiliariaContext _context = new ImobiliariaContext();
 
         [HttpGet]
+        public ActionResult Listar()
+        {
+            //Include -> carrega os dados do relacionamento
+            var lista = _context.Imoveis.Include("Categoria").ToList();
+            return View(lista);
+        }
+
+        [HttpGet]
         public ActionResult Cadastrar()
         {
             //Buscar por todas as categorias
