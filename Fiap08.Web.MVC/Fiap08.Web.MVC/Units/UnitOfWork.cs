@@ -13,6 +13,21 @@ namespace Fiap08.Web.MVC.Units
 
         private ITimeRepository _timeRepository;
 
+        //propfull -> tab tab
+        private IJogadorRepository _jogadorRepository;
+
+        public IJogadorRepository JogadorRepository
+        {
+            get
+            {
+                if (_jogadorRepository == null)
+                {
+                    _jogadorRepository = new JogadorRepository(_context);
+                }
+                return _jogadorRepository;
+            }
+        }
+
         public ITimeRepository TimeRepository
         {
             get

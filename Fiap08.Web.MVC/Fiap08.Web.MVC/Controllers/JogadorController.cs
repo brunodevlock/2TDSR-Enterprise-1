@@ -8,26 +8,27 @@ using System.Web.Mvc;
 
 namespace Fiap08.Web.MVC.Controllers
 {
-    public class TimeController : Controller
+    public class JogadorController : Controller
     {
         private UnitOfWork _unit = new UnitOfWork();
-
-        [HttpPost]
-        public ActionResult Cadastrar(Time time)
-        {
-            _unit.TimeRepository.Cadastrar(time);
-            _unit.Salvar();
-            TempData["msg"] = "Time cadastrado";
-            return RedirectToAction("Cadastrar");
-        }
 
         [HttpGet]
         public ActionResult Cadastrar()
         {
+            var times = _unit.TimeRepository.Listar();
+            ViewBag.times = new SelectList(times, "TimeId", "Nome");
             return View();
         }
 
-        //Libera os recursos
+        [HttpPost]
+        public ActionResult Cadastrar(Jogador jogador)
+        {
+            _unit.JogadorRepository.Cadastrar(jogador);
+            _unit.Salvar();
+            TempData["msg"] = "Jogador cadastrado";
+            return RedirectToAction("Cadastrar");
+        }
+
         protected override void Dispose(bool disposing)
         {
             _unit.Dispose();
