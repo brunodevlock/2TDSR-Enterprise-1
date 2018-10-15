@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.NAC.Correcao", "Fiap.NAC.Correcao\Fiap.NAC.Correcao.csproj", "{DAFDC2CB-4EC7-43F0-828B-1DCCF779A291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAFDC2CB-4EC7-43F0-828B-1DCCF779A291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFDC2CB-4EC7-43F0-828B-1DCCF779A291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFDC2CB-4EC7-43F0-828B-1DCCF779A291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFDC2CB-4EC7-43F0-828B-1DCCF779A291}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B30B0064-AF6D-4D98-A00B-7F9AD8877B8E}
+	EndGlobalSection
+EndGlobal
